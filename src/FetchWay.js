@@ -6,6 +6,18 @@ function FetchWay() {
     React.useEffect(()=>{
       fetch(url).then(response => response.json()).then(actualData => setUserData(actualData)).catch(error => console.log(error))
     },[])
+
+    // fetch with async await 
+    const fetchWithAsyncAwait = async() => {
+        try{
+            let pResult = await fetch(url)
+            let actualResult = await pResult.json()
+            setUserData(actualResult)
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
     // No need to touch code below
     return (
       <div className="App">
