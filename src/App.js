@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import FetchWay from "./FetchWay";
 
 function App() {
   const [list, setList] = useState([]);
@@ -31,6 +32,9 @@ function App() {
             );
           })}
       </ui>
+      <div>
+        <FetchWay />
+      </div>
     </div>
   );
 }
